@@ -8,8 +8,6 @@ export class ProjectService {
   constructor(private _httpClient: HttpClient) {}
 
   getAll(): Observable<ProjectModel[]> {
-    return this._httpClient.get<ProjectModel[]>(
-      'https://eqsfaxnghe.cfolks.pl/assets/data/projects.json'
-    );
+    return this._httpClient.get<ProjectModel[]>('assets/data/projects.json');
   }
 }

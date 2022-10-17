@@ -8,18 +8,32 @@ import { EmployeeListComponentModule } from './ui/employee-list/employee-list.co
 import { EmployeeServiceModule } from './services/employee.service-module';
 import { ProjectComponentModule } from './ui/project/project.component-module';
 import { ProjectServiceModule } from './services/project.service-module';
+import { FormComponentModule } from './ui/form/form.component-module';
+import { TestFormComponentModule } from './ui/test-form/test-form.component-module';
+import { TaskFormComponentModule } from './ui/task-form/task-form.component-module';
+import {
+  AddEmployeeComponentModule,
+  CrudEmployeeComponentModule,
+  CrudEmployeeServiceModule,
+} from '@final-exam';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     EmployeeServiceModule,
     ProjectComponentModule,
+    CrudEmployeeComponentModule,
+    CrudEmployeeServiceModule,
     ProjectServiceModule,
+    AddEmployeeComponentModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     EmployeeListComponentModule,
     ImagesComponentModule,
+    FormComponentModule,
+    TestFormComponentModule,
+    TaskFormComponentModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

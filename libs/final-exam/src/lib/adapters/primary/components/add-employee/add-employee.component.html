@@ -1,0 +1,5 @@
+<form [formGroup]="crudEmployee" (ngSubmit)="onCreateEmployeeSubmit(crudEmployee.value)">
+  <input type="text" formControlName="name" placeholder="Name">
+  <input type="number" formControlName="salary" placeholder="Salary">
+  <input type="submit" [disabled]="crudEmployee.invalid" value="Submit">
+</form>

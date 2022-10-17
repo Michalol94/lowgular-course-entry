@@ -1,0 +1,7 @@
+<form [formGroup]="employeeForm">
+  <input type="text" placeholder="name" formControlName="name">
+  <input type="number" placeholder="age" formControlName="age">
+  <input type="submit" [disabled]="employeeForm.invalid" value="Submit">
+</form>
+
+{{employeeForm.value.name}}

@@ -1,0 +1,5 @@
+<ul *ngIf="crudEmployee$ | async as data">
+  <li *ngFor="let employee of data"> {{employee.id}} {{employee.name}} {{employee.salary}}
+    <button (click)="onDeleteEmployeeClicked(employee.id)"></button>
+  </li>
+</ul>

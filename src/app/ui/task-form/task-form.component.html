@@ -1,0 +1,6 @@
+<form [formGroup]="taskEmployeeForm" (ngSubmit)="onSubmitClicked(taskEmployeeForm.value)">
+  <input type="text" formControlName="name" placeholder="name">
+  <input type="number" formControlName="age" placeholder="age">
+  <input type="number" formControlName="salary" placeholder="salary">
+  <input type="submit" [disabled]="taskEmployeeForm.invalid" value="Submit">
+</form>

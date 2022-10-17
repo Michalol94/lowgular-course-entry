@@ -5,7 +5,7 @@ import {
 } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { EmployeeModel } from '../../model/employee.model';
+
 import { EmployeeService } from '../../services/employee.service';
 import { PeopleModel } from '../../model/people.model';
 
@@ -20,7 +20,12 @@ export class EmployeeListComponent {
   // data$: Observable<EmployeeModel[] | null> = this._httpClient.get<EmployeeModel[]>('assets/data/employees.json');
 
   readonly data$: Observable<PeopleModel[]> = this._employeeService.getAll();
+
   data = [{ name: 'Jacek' }, { name: 'Stefan' }];
+
+  remove(id: string) {
+    this._employeeService.delete(id).subscribe();
+  }
 
   constructor(
     private _httpClient: HttpClient,
